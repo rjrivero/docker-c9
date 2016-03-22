@@ -1,0 +1,8 @@
+#!/bin/sh
+
+export LOGDIR=/var/log/c9
+export LOGUSR=c9
+
+mkdir -p "${LOGDIR}" && chown ${LOGUSR}:${LOGUSR} "${LOGDIR}"
+exec /sbin/setuser ${LOGUSR} svlogd -tt "${LOGDIR}"
+
