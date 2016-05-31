@@ -27,3 +27,5 @@ ENV C9_PASSWORD password
 
 # Add runit configuration
 ADD files/service /etc/service
+
+EXPOSE 8080
