@@ -5,7 +5,7 @@ FROM phusion/baseimage
 MAINTAINER Rafael Rivero <private@email.com>
 
 # Ubuntu package version
-ENV LSB_RELEASE trusty
+ENV LSB_RELEASE xenial
 
 # Install base APT packages, prepare sudo
 RUN apt-get update -qq && \
