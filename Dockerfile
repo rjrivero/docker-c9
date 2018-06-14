@@ -10,7 +10,8 @@ ENV LSB_RELEASE xenial
 # Install base APT packages, prepare sudo
 RUN apt-get update -qq && \
     DEBIAN_FRONTEND=noninteractive apt-get -y install   \
-        wget vim less curl unzip git python build-essential sudo && \
+        wget vim less curl unzip git python build-essential sudo \
+        fontconfig libfontconfig1 && \
     apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* && \
     groupadd -g 1000 c9 && \
     useradd  -g c9 -G sudo -u 1000 -m c9 && \
